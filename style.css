@@ -9,6 +9,7 @@ figure {
   justify-content: center;
   height: 50vh;
   width: 50vw;
+  padding: 10vh;
 }
 
 svg {
@@ -18,7 +19,7 @@ svg {
 
 /* hover tip */
 body:hover:after {
-  content: "Hover to Slow Motion";
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
