@@ -4,6 +4,7 @@ body {
 }
 
 figure {
+  background:#FFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,11 +12,14 @@ figure {
   width: 100vw;
 }
 
+
 svg {
-  padding: 5vw;
-  width: 50vw;
-  height: 50vh;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
+
 
 /* hover tip */
 body:hover:after {
