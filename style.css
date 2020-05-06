@@ -7,14 +7,14 @@ figure {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50vh;
-  width: 50vw;
-  padding: 10vh;
+  height: 100vh;
+  width: 100vw;
 }
 
 svg {
   padding: 5vw;
-  width: 90vw;
+  width: 50vw;
+  height: 50vh;
 }
 
 /* hover tip */
