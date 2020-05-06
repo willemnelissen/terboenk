@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Anago Book';
+  src: url('Anago-Book.ttf');
+}
+
 body {
   background: #FED75A;
   overflow: scroll;
@@ -5,7 +10,7 @@ body {
 
 p {
   color: black;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Anago Book','Lato', sans-serif;
 }
 
 .wrapper {
