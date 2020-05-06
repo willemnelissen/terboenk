@@ -4,7 +4,7 @@ var tmax_optionsGlobal = {
   yoyo: true
 };
 
-CSSPlugin.useSVGTransformAttr = false;
+CSSPlugin.useSVGTransformAttr = true;
 
 var tl = new TimelineMax(tmax_optionsGlobal),
     path = 'svg *',
