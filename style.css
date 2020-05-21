@@ -113,6 +113,10 @@ svg {
   text-align: center;
 }
 
+.face-front button {
+  margin-bottom: 50px;
+}
+
 /*Back face: the information for XS*/
 
 .face-back {
@@ -120,3 +124,7 @@ svg {
   transform: rotateY(180deg);
 }
 
+.face-back p {
+  margin-top: 50px;
+  color: white;
+}
