@@ -26,7 +26,7 @@
 
 body {
   background: #1D3864;
-  overflow: hidden;
+  overflow: scroll;
   font-family: 'Anago Book', 'Lato', sans-serif;
 }
 
