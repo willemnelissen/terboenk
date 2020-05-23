@@ -26,7 +26,8 @@
 
 body {
   background: #1D3864;
-  overflow: scroll;
+  overflow: hidden;
+  overflow-y: auto;
   font-family: 'Anago Book', 'Lato', sans-serif;
 }
 
@@ -51,11 +52,17 @@ h2 {
   font-family: 'Anago Medium Italic', 'Lato', sans-serif;
 }
 
+.button-list {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+
 .button {
   background: #BD3749;
   border: none;
   color: white;
-  margin: auto;
+  margin: 10px auto;
   padding: 15px 60px;
   border-radius: 0px;
   box-shadow: 3px 3px 2px 0px hsl(352, 55%, 15%);
@@ -182,7 +189,7 @@ svg {
 }
 
 .face-back .info-box {
-  margin-top: 10vh;
+  margin-top: 5vh;
   text-align: justify;
   padding: 20px;
   max-width: 460px;
