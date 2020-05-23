@@ -3,9 +3,26 @@
   src: url('Anago-Book.ttf');
 }
 @font-face {
+  font-family: 'Anago Book Italic';
+  src: url('Anago-BookItalic.ttf');
+}
+@font-face {
   font-family: 'Anago Bold';
   src: url('Anago-Bold.ttf')
 }
+@font-face {
+  font-family: 'Anago Bold Italic';
+  src: url('Anago-BoldItalic.ttf')
+}
+@font-face {
+  font-family: 'Anago Medium';
+  src: url('Anago-Medium.ttf')
+}
+@font-face {
+  font-family: 'Anago Medium Italic';
+  src: url('Anago-MediumItalic.ttf')
+}
+
 
 body {
   background: #1D3864;
@@ -13,8 +30,14 @@ body {
   font-family: 'Anago Book', 'Lato', sans-serif;
 }
 
+a {
+  font-family: 'Anago Book Italic', sans-serif;
+}
+
 p {
   color: black;
+  font-size: 16px;
+  font-weight: normal;
   font-family: 'Anago Book','Lato', sans-serif;
 }
 
@@ -24,21 +47,39 @@ h1 {
   font-size: 50pt;
 }
 
+h2 {
+  font-family: 'Anago Medium Italic', 'Lato', sans-serif;
+}
+
 .button {
   background: #BD3749;
   border: none;
   color: white;
   margin: auto;
-  padding: 20px;
+  padding: 15px 60px;
+  border-radius: 0px;
+  box-shadow: 3px 3px 2px 0px hsl(352, 55%, 15%);
+  transition: all 0.2s;
+  cursor: pointer;
 }
 
+.button:hover {
+  background: hsl(352, 55%, 45%);
+}
+
+.button:active {
+  background: hsl(352,55%,25%);
+}
+
+
 /* Code for the 3D flip animation */
+/* scene is the 3D environment*/
 .scene {
   width: 100vw;
   height: 100vh;
-  perspective: 10000px;
+  perspective: 3000px;
 }
-
+/* card is the 3D object*/
 .card {
   width: 100%;
   height: 100%;
@@ -47,17 +88,20 @@ h1 {
 }
 
 .card.is-flipped {
-  animation: flip 2s ease;
+  animation: flip 1.2s ease-in-out;
   animation-fill-mode: forwards;
 }
 
 .card.flip-back {
-  animation: flip-back 2s ease;
+  animation: flip-back 1.2s ease-in-out;
 }
 
 @keyframes flip {
-  25% {
+  33% {
     transform: scale(0.5);
+  }
+  66% {
+    transform: scale(0.5) rotateY(200deg);
   }
   75% {
     transform: scale(0.5) rotateY(180deg);
@@ -71,8 +115,11 @@ h1 {
   0% {
     transform: scale(1) rotateY(180deg);
   }
-  25% {
+  33% {
     transform: scale(0.5) rotateY(180deg);
+  }
+  66% {
+    transform: scale(0.5) rotateY(-20deg)
   }
   75% {
     transform: scale(0.5) rotateY(0);
@@ -120,11 +167,32 @@ svg {
 /*Back face: the information for XS*/
 
 .face-back {
-  background: #009DC6;
+  background: #D3D0CB;
   transform: rotateY(180deg);
 }
 
-.face-back p {
-  margin-top: 50px;
+.face-back h1 {
+  margin-top: 5vh;
+  font-size: 47px;
+  width: 500px;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(1,1,1,0) 0% 40%, #BD3749 40% 80%);
+  padding-bottom: 10px;
   color: white;
 }
+
+.face-back .info-box {
+  margin-top: 10vh;
+  text-align: justify;
+  padding: 20px;
+  max-width: 460px;
+  background: white;
+}
+
+.face-back h2 {
+  color: black;
+  font-size: 18px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+

@@ -47,14 +47,14 @@ $(function() {
   }
 
   var $card = $(".card")
-  $(".flip-button").on("click",function(){
+  $(".flip-button").on("mouseup",function(){
     $card.toggleClass("is-flipped");
     if ($card.hasClass('flip-back')) {
       $card.removeClass('flip-back')
     }
   })
 
-  $(".flip-back-button").on("click",function(){
+  $(".flip-back-button").on("mouseup",function(){
     $card.toggleClass("flip-back");
     $card.toggleClass("is-flipped");
   })
