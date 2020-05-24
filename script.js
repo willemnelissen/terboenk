@@ -47,6 +47,23 @@ $(function() {
   }
 
   var $card = $(".card")
+  
+  $("#button-xs").on("mouseup",function(){
+    $("#face-xs").show();
+    $("#face-team").hide();
+    $("#face-missie").hide();
+  })
+  $("#button-team").on("mouseup",function(){
+    $("#face-xs").hide();
+    $("#face-team").show();
+    $("#face-missie").hide();
+  })
+  $("#button-missie").on("mouseup",function(){
+    $("#face-xs").hide();
+    $("#face-team").hide();
+    $("#face-missie").show();
+  })
+
   $(".flip-button").on("mouseup",function(){
     $card.toggleClass("is-flipped");
     if ($card.hasClass('flip-back')) {
@@ -58,4 +75,8 @@ $(function() {
     $card.toggleClass("flip-back");
     $card.toggleClass("is-flipped");
   })
+
+
+
+  
 });
