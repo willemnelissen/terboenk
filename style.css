@@ -49,7 +49,9 @@ h1 {
 }
 
 h2 {
+  color: black;
   font-family: 'Anago Medium Italic', 'Lato', sans-serif;
+  font-size: 18px;
 }
 
 .button-list {
@@ -199,13 +201,22 @@ svg {
 }
 
 .face-back h2 {
-  color: black;
-  font-size: 18px;
   padding-top: 15px;
   padding-bottom: 5px;
 }
 
 .flip-back-button {
   margin-top: 5vh;
+}
+
+.face-back .person-wrapper {
+  background: white;
+  margin-top: 5vh;
+  text-align: justify;
+}
+
+.face-back .person-active {
+  max-width: 300px;
+  padding: 20px;
 }
 
