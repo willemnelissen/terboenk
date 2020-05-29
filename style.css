@@ -233,6 +233,7 @@ svg {
   transition: all 0.5s;
 }
 
+
 #face-team .person-head {
   display: flex;
   flex-direction: row;
@@ -241,7 +242,7 @@ svg {
 #face-team .person-head img {
   border-radius: 50%;
   border: 2px black;
-  padding: 10px;
+  padding: 10px 10px 10px 0px;
 }
 
 #face-team .person-head h3 {
@@ -252,8 +253,8 @@ svg {
 }
 
 #face-team .person.active {
-  background: red;
-  height: 500px;
+  background: white;
+  height: 300px;
   min-height: 70px;
   max-width: 460px;
 }
