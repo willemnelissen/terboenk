@@ -77,9 +77,12 @@ $(function() {
   })
 
   $(".person").click(function(){
-    $(".person").removeClass("active");
-    $(this).addClass("active");
- });
-
+    if ($(this).hasClass("active")) {
+      $(".person").removeClass("active");  
+    } else {
+      $(".person").removeClass("active");
+      $(this).addClass("active");  
+    }
+  });
   
 });
