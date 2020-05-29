@@ -152,6 +152,7 @@ h2 {
   flex-direction: column;
   justify-items: flex-start;
   align-items: center;
+  overflow: auto;
 }
 
 /* Front face: the animated logo and blurb */
@@ -175,7 +176,7 @@ svg {
   text-align: center;
 }
 
-/*Back face: information*/
+/*Back face: general*/
 
 .face-back {
   background: #D3D0CB;
@@ -209,14 +210,50 @@ svg {
   margin-top: 5vh;
 }
 
-.face-back .person-wrapper {
-  background: white;
+/*Face team: wie zijn wij?*/
+#face-team .people-wrapper {
   margin-top: 5vh;
   text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.face-back .person-active {
+#face-team .person {
+  overflow: hidden;
   max-width: 300px;
-  padding: 20px;
+  height: 70px;
+  min-height: 70px;
+  margin: 20px;
+  padding: 0px 20px;
+  position: relative;
+  background: white;
+  cursor: pointer;
+  transition: all 0.5s;
 }
 
+#face-team .person-head {
+  display: flex;
+  flex-direction: row;
+}
+
+#face-team .person-head img {
+  border-radius: 50%;
+  border: 2px black;
+  padding: 10px;
+}
+
+#face-team .person-head h3 {
+  font-family: 'Anago Book Italic', 'Lato', sans-serif; 
+  color: black;
+  opacity: 0.7;
+  font-size: 16px;
+}
+
+#face-team .person.active {
+  background: red;
+  height: 500px;
+  min-height: 70px;
+  max-width: 460px;
+}

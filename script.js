@@ -76,7 +76,10 @@ $(function() {
     $card.toggleClass("is-flipped");
   })
 
-
+  $(".person").click(function(){
+    $(".person").removeClass("active");
+    $(this).addClass("active");
+ });
 
   
 });
