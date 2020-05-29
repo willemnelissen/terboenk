@@ -26,8 +26,6 @@
 
 body {
   background: #1D3864;
-  overflow-x: hidden;
-  overflow-y: hidden;
   font-family: 'Anago Book', 'Lato', sans-serif;
 }
 
@@ -84,12 +82,11 @@ h2 {
   background: hsl(352,55%,25%);
 }
 
-
 /* Code for the 3D flip animation */
 /* scene is the 3D environment*/
 .scene {
   width: 100vw;
-  height: 110vh;
+  height: 100vh;
   perspective: 3000px;
 }
 /* card is the 3D object*/
@@ -152,7 +149,8 @@ h2 {
   flex-direction: column;
   justify-items: flex-start;
   align-items: center;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Front face: the animated logo and blurb */
