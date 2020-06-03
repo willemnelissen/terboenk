@@ -208,7 +208,6 @@ h2 {
 }
 
 .face {
-  position: absolute;
   height: 100%;
   width: 100%;
   -webkit-backface-visibility: hidden;
@@ -233,6 +232,7 @@ h2 {
 /* Front face: the animated logo and blurb */
 .face-front {
   background: #FED75A;
+  position: absolute;
 }
 
 .figure-wrapper {
@@ -254,6 +254,7 @@ svg {
 /*Back face: general*/
 
 .face-back {
+  position: absolute;
   background: #D3D0CB;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
