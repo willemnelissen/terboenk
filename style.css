@@ -99,10 +99,11 @@ div {
 .scene {
   width: 100vw;
   height: 110vh;
+  overflow: scroll;
   -webkit-perspective: 3000px;
           perspective: 3000px;
-  overflow: visible;
 }
+
 /* card is the 3D object*/
 .card {
   width: 100%;
