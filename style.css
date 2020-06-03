@@ -1,26 +1,26 @@
 @font-face {
   font-family: 'Anago Book';
-  src: url('Anago-Book.ttf');
+  src: url('Anago-Book.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Anago Book Italic';
-  src: url('Anago-BookItalic.ttf');
+  src: url('Anago-BookItalic.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Anago Bold';
-  src: url('Anago-Bold.ttf')
+  src: url('Anago-Bold.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Anago Bold Italic';
-  src: url('Anago-BoldItalic.ttf')
+  src: url('Anago-BoldItalic.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Anago Medium';
-  src: url('Anago-Medium.ttf')
+  src: url('Anago-Medium.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Anago Medium Italic';
-  src: url('Anago-MediumItalic.ttf')
+  src: url('Anago-MediumItalic.ttf') format('truetype');
 }
 
 
@@ -56,7 +56,7 @@ h2 {
   margin: 50px auto;
   display: flex;
   flex-direction: column;
-  justify-items: flex-start;
+  justify-content: flex-start;
 }
 
 .button {
@@ -69,17 +69,17 @@ h2 {
   text-align: center;
 
   border: none;
-  box-shadow: 3px 3px 2px 0px hsl(352, 55%, 15%);
+  box-shadow: 3px 3px 2px 0 hsl(352, 55%, 15%);
   transition: background-color 0.2s;
   cursor: pointer;
 }
 
 .button:hover {
-  background: hsl(352, 55%, 45%);
+  background: #b23444;
 }
 
 .button:active {
-  background: hsl(352,55%,25%);
+  background: #631d26;
 }
 
 /* Code for the 3D flip animation */
@@ -147,7 +147,7 @@ h2 {
   backface-visibility: hidden;
   display: flex;
   flex-direction: column;
-  justify-items: flex-start;
+  justify-content: flex-start;
   align-items: center;
   overflow-x: hidden;
   overflow-y: auto;
@@ -167,10 +167,10 @@ svg {
   height: 60vh;
 }
 
-#tekst {
+.text-front {
   max-height: 10vh;
   max-width: 500px;
-  margin: 0px auto;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -225,7 +225,7 @@ svg {
   max-height: 70px;
 
   margin: 5px 20px;
-  padding: 0px 20px;
+  padding: 0 20px;
 
   position: relative;
   overflow: hidden;
@@ -239,7 +239,7 @@ svg {
   background: white;
   min-height: 70px;
   max-height: 1000px;
-  box-shadow: 0px 0px 5px 5px grey;
+  box-shadow: 0 0 5px 5px grey;
   transition: all 1s;
 }
 
@@ -252,7 +252,7 @@ svg {
 #face-team .person-head img {
   border-radius: 50%;
   border: 2px black;
-  padding: 10px 10px 10px 0px;
+  padding: 10px 10px 10px 0;
 }
 
 #face-team .person-head h3 {
