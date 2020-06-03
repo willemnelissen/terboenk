@@ -54,9 +54,16 @@ h2 {
 
 .button-list {
   margin: 50px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .button {
@@ -69,7 +76,10 @@ h2 {
   text-align: center;
 
   border: none;
-  box-shadow: 3px 3px 2px 0 hsl(352, 55%, 15%);
+  -webkit-box-shadow: 3px 3px 2px 0 hsl(352, 55%, 15%);
+          box-shadow: 3px 3px 2px 0 hsl(352, 55%, 15%);
+  -webkit-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
   transition: background-color 0.2s;
   cursor: pointer;
 }
@@ -87,56 +97,114 @@ h2 {
 .scene {
   width: 100vw;
   height: 100vh;
-  perspective: 3000px;
+  -webkit-perspective: 3000px;
+          perspective: 3000px;
 }
 /* card is the 3D object*/
 .card {
   width: 100%;
   height: 100%;
-  transform-origin: center center;
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
   position: relative;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .card.is-flipped {
-  animation: flip 1.2s ease-in-out;
-  animation-fill-mode: forwards;
+  -webkit-animation: flip 1.2s ease-in-out;
+          animation: flip 1.2s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .card.flip-back {
-  animation: flip-back 1.2s ease-in-out;
+  -webkit-animation: flip-back 1.2s ease-in-out;
+          animation: flip-back 1.2s ease-in-out;
+}
+
+@-webkit-keyframes flip {
+  33% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  66% {
+    -webkit-transform: scale(0.5) rotateY(200deg);
+            transform: scale(0.5) rotateY(200deg);
+  }
+  75% {
+    -webkit-transform: scale(0.5) rotateY(180deg);
+            transform: scale(0.5) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateY(180deg);
+            transform: scale(1) rotateY(180deg);
+  }
 }
 
 @keyframes flip {
   33% {
-    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
   }
   66% {
-    transform: scale(0.5) rotateY(200deg);
+    -webkit-transform: scale(0.5) rotateY(200deg);
+            transform: scale(0.5) rotateY(200deg);
   }
   75% {
-    transform: scale(0.5) rotateY(180deg);
+    -webkit-transform: scale(0.5) rotateY(180deg);
+            transform: scale(0.5) rotateY(180deg);
   }
   100% {
-    transform: scale(1) rotateY(180deg);
+    -webkit-transform: scale(1) rotateY(180deg);
+            transform: scale(1) rotateY(180deg);
+  }
+}
+
+@-webkit-keyframes flip-back {
+  0% {
+    -webkit-transform: scale(1) rotateY(180deg);
+            transform: scale(1) rotateY(180deg);
+  }
+  33% {
+    -webkit-transform: scale(0.5) rotateY(180deg);
+            transform: scale(0.5) rotateY(180deg);
+  }
+  66% {
+    -webkit-transform: scale(0.5) rotateY(-20deg);
+            transform: scale(0.5) rotateY(-20deg)
+  }
+  75% {
+    -webkit-transform: scale(0.5) rotateY(0);
+            transform: scale(0.5) rotateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateY(0);
+            transform: scale(1) rotateY(0);
   }
 }
 
 @keyframes flip-back {
   0% {
-    transform: scale(1) rotateY(180deg);
+    -webkit-transform: scale(1) rotateY(180deg);
+            transform: scale(1) rotateY(180deg);
   }
   33% {
-    transform: scale(0.5) rotateY(180deg);
+    -webkit-transform: scale(0.5) rotateY(180deg);
+            transform: scale(0.5) rotateY(180deg);
   }
   66% {
-    transform: scale(0.5) rotateY(-20deg)
+    -webkit-transform: scale(0.5) rotateY(-20deg);
+            transform: scale(0.5) rotateY(-20deg)
   }
   75% {
-    transform: scale(0.5) rotateY(0);
+    -webkit-transform: scale(0.5) rotateY(0);
+            transform: scale(0.5) rotateY(0);
   }
   100% {
-    transform: scale(1) rotateY(0);
+    -webkit-transform: scale(1) rotateY(0);
+            transform: scale(1) rotateY(0);
   }
 }
 
@@ -144,11 +212,21 @@ h2 {
   position: absolute;
   height: 100%;
   width: 100%;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -178,7 +256,8 @@ svg {
 
 .face-back {
   background: #D3D0CB;
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .face-back h1 {
@@ -186,6 +265,8 @@ svg {
   font-size: 47px;
   width: 500px;
   text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(1,1,1,0)), color-stop(40%, #BD3749));
+  background: -o-linear-gradient(top, rgba(1,1,1,0) 0% 40%, #BD3749 40% 80%);
   background: linear-gradient(to bottom, rgba(1,1,1,0) 0% 40%, #BD3749 40% 80%);
   padding-bottom: 10px;
   color: white;
@@ -212,11 +293,21 @@ svg {
 #face-team .people-wrapper {
   margin-top: 5vh;
   text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 #face-team .person {
@@ -231,6 +322,8 @@ svg {
   overflow: hidden;
   background: white;
   cursor: pointer;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 
 }
@@ -239,14 +332,22 @@ svg {
   background: white;
   min-height: 70px;
   max-height: 1000px;
-  box-shadow: 0 0 5px 5px grey;
+  -webkit-box-shadow: 0 0 5px 5px grey;
+          box-shadow: 0 0 5px 5px grey;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
   transition: all 1s;
 }
 
 
 #face-team .person-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 #face-team .person-head img {
