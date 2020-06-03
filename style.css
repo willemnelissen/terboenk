@@ -98,7 +98,7 @@ div {
 /* scene is the 3D environment*/
 .scene {
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   -webkit-perspective: 3000px;
           perspective: 3000px;
 }
