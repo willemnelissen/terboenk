@@ -55,7 +55,6 @@ div {
 }
 .button-list {
   margin: 50px auto;
-  padding: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,6 +65,7 @@ div {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  overflow: visible;
 }
 
 .button {
