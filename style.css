@@ -1,26 +1,26 @@
 @font-face {
   font-family: 'Anago Book';
-  src: url('Anago-Book.ttf') format('truetype');
+  src: url('Anago-Book.ttf');
 }
 @font-face {
   font-family: 'Anago Book Italic';
-  src: url('Anago-BookItalic.ttf') format('truetype');
+  src: url('Anago-BookItalic.ttf');
 }
 @font-face {
   font-family: 'Anago Bold';
-  src: url('Anago-Bold.ttf') format('truetype');
+  src: url('Anago-Bold.ttf')
 }
 @font-face {
   font-family: 'Anago Bold Italic';
-  src: url('Anago-BoldItalic.ttf') format('truetype');
+  src: url('Anago-BoldItalic.ttf')
 }
 @font-face {
   font-family: 'Anago Medium';
-  src: url('Anago-Medium.ttf') format('truetype');
+  src: url('Anago-Medium.ttf')
 }
 @font-face {
   font-family: 'Anago Medium Italic';
-  src: url('Anago-MediumItalic.ttf') format('truetype');
+  src: url('Anago-MediumItalic.ttf')
 }
 
 
@@ -56,13 +56,8 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-direction: column;
+  justify-items: flex-start;
 }
 
 .button {
@@ -75,20 +70,17 @@ h2 {
   text-align: center;
 
   border: none;
-  -webkit-box-shadow: 3px 3px 2px 0 hsl(352, 55%, 15%);
-          box-shadow: 3px 3px 2px 0 hsl(352, 55%, 15%);
-  -webkit-transition: background-color 0.2s;
-  -o-transition: background-color 0.2s;
+  box-shadow: 3px 3px 2px 0px hsl(352, 55%, 15%);
   transition: background-color 0.2s;
   cursor: pointer;
 }
 
 .button:hover {
-  background: #b23444;
+  background: hsl(352, 55%, 45%);
 }
 
 .button:active {
-  background: #631d26;
+  background: hsl(352,55%,25%);
 }
 
 /* Code for the 3D flip animation */
@@ -215,16 +207,9 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-items: flex-start;
+  align-items: center;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -244,10 +229,10 @@ svg {
   height: 60vh;
 }
 
-.text-front {
+#tekst {
   max-height: 10vh;
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0px auto;
   text-align: center;
 }
 
@@ -316,7 +301,7 @@ svg {
   max-height: 70px;
 
   margin: 5px 20px;
-  padding: 0 20px;
+  padding: 0px 20px;
 
   position: relative;
   overflow: hidden;
@@ -332,10 +317,7 @@ svg {
   background: white;
   min-height: 70px;
   max-height: 1000px;
-  -webkit-box-shadow: 0 0 5px 5px grey;
-          box-shadow: 0 0 5px 5px grey;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
+  box-shadow: 0px 0px 5px 5px grey;
   transition: all 1s;
 }
 
@@ -353,7 +335,7 @@ svg {
 #face-team .person-head img {
   border-radius: 50%;
   border: 2px black;
-  padding: 10px 10px 10px 0;
+  padding: 10px 10px 10px 0px;
 }
 
 #face-team .person-head h3 {
