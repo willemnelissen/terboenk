@@ -1,1 +1,3 @@
 *.svg
+.jekyll-cache
+_site
